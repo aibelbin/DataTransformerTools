@@ -1,0 +1,6 @@
+/venv
+.venv
+/datasets
+/raw_images
+/raw_json
+yolo_data.yaml
