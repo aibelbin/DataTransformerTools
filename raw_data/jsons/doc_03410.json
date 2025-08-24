@@ -1,0 +1,139 @@
+{
+  "file_name": "doc_03410.png",
+  "annotations": [
+    {
+      "bbox": [
+        55.14,
+        96.25,
+        240.97,
+        128.82
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        55.14,
+        237.4,
+        240.99,
+        257.91
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        55.14,
+        507.7,
+        240.98,
+        152.13
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        313.08,
+        84.7,
+        241.04,
+        140.37
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        55.14,
+        695.67,
+        240.96,
+        34.65
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        313.08,
+        237.4,
+        240.98,
+        140.43
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        313.08,
+        401.91,
+        241.03,
+        116.91
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        313.08,
+        542.91,
+        241.02,
+        175.65
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        55.14,
+        84.01,
+        60.3,
+        12.66
+      ],
+      "category_id": 2,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        55.14,
+        671.53,
+        43.35,
+        12.66
+      ],
+      "category_id": 2,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        55.14,
+        683.78,
+        33.86,
+        11.04
+      ],
+      "category_id": 2,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        313.08,
+        390.02,
+        188.69,
+        11.04
+      ],
+      "category_id": 2,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        313.08,
+        531.02,
+        136.62,
+        11.04
+      ],
+      "category_id": 2,
+      "category_name": ""
+    }
+  ],
+  "corruption": {
+    "type": "none",
+    "severity": 0
+  }
+}

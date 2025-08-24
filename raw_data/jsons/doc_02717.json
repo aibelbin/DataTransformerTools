@@ -1,0 +1,89 @@
+{
+  "file_name": "doc_02717.png",
+  "annotations": [
+    {
+      "bbox": [
+        45.01,
+        416.46,
+        243.0,
+        241.16
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        45.01,
+        658.89,
+        243.0,
+        67.98
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.03,
+        47.73,
+        242.99,
+        141.85
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.03,
+        190.26,
+        242.99,
+        207.71
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.03,
+        397.86,
+        243.02,
+        208.42
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.03,
+        606.95,
+        243.88,
+        120.65
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        54.03,
+        58.44,
+        233.97,
+        8.87
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        54.03,
+        83.82,
+        234.01,
+        303.17
+      ],
+      "category_id": 4,
+      "category_name": ""
+    }
+  ],
+  "corruption": {
+    "type": "none",
+    "severity": 0
+  }
+}

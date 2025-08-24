@@ -1,0 +1,139 @@
+{
+  "file_name": "doc_03566.png",
+  "annotations": [
+    {
+      "bbox": [
+        52.09,
+        72.78,
+        240.1,
+        10.58
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        52.09,
+        95.69,
+        240.13,
+        148.06
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        52.09,
+        317.08,
+        240.12,
+        125.15
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        52.09,
+        594.82,
+        240.11,
+        125.15
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        310.12,
+        72.78,
+        240.15,
+        125.15
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        52.09,
+        720.85,
+        240.11,
+        22.04
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        310.12,
+        198.81,
+        240.14,
+        148.06
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        310.12,
+        347.75,
+        240.12,
+        125.15
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        310.12,
+        473.77,
+        240.13,
+        79.32
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        310.12,
+        594.82,
+        240.13,
+        148.06
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        57.69,
+        448.84,
+        234.54,
+        139.38
+      ],
+      "category_id": 3,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        52.09,
+        260.01,
+        194.67,
+        45.34
+      ],
+      "category_id": 2,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        310.12,
+        570.74,
+        225.92,
+        10.97
+      ],
+      "category_id": 2,
+      "category_name": ""
+    }
+  ],
+  "corruption": {
+    "type": "none",
+    "severity": 0
+  }
+}

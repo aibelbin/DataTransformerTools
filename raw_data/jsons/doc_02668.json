@@ -1,0 +1,99 @@
+{
+  "file_name": "doc_02668.png",
+  "annotations": [
+    {
+      "bbox": [
+        45.01,
+        66.55,
+        243.0,
+        177.06
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.03,
+        47.73,
+        242.97,
+        121.72
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        45.01,
+        244.57,
+        242.99,
+        65.88
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.03,
+        210.95,
+        242.98,
+        99.5
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        45.01,
+        709.99,
+        258.38,
+        7.88
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        45.01,
+        326.0,
+        501.07,
+        373.49
+      ],
+      "category_id": 5,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        45.01,
+        49.05,
+        58.44,
+        10.35
+      ],
+      "category_id": 2,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.03,
+        184.15,
+        41.04,
+        10.35
+      ],
+      "category_id": 2,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.03,
+        199.79,
+        42.78,
+        9.85
+      ],
+      "category_id": 2,
+      "category_name": ""
+    }
+  ],
+  "corruption": {
+    "type": "none",
+    "severity": 0
+  }
+}

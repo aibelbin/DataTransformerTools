@@ -5,12 +5,12 @@ data: yolo_data.yaml
 epochs: 50
 time: null
 patience: 100
-batch: 16
+batch: 1
 imgsz: 1024
 save: true
 save_period: -1
 cache: false
-device: cpu
+device: '0'
 workers: 8
 project: runs
 name: layout_v8m

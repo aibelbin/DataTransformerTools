@@ -1,0 +1,129 @@
+{
+  "file_name": "doc_04081.png",
+  "annotations": [
+    {
+      "bbox": [
+        60.14,
+        62.93,
+        228.03,
+        94.25
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        60.14,
+        158.93,
+        228.04,
+        334.24
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.14,
+        62.91,
+        228.03,
+        82.25
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        60.14,
+        494.91,
+        228.06,
+        226.25
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.14,
+        146.91,
+        228.19,
+        142.25
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.14,
+        290.9,
+        227.99,
+        130.25
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.14,
+        422.9,
+        227.89,
+        58.25
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.14,
+        482.89,
+        228.03,
+        82.25
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.14,
+        602.93,
+        61.56,
+        10.25
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.14,
+        650.93,
+        228.07,
+        70.25
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.14,
+        584.43,
+        97.44,
+        11.76
+      ],
+      "category_id": 2,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        306.14,
+        633.16,
+        74.08,
+        9.26
+      ],
+      "category_id": 2,
+      "category_name": ""
+    }
+  ],
+  "corruption": {
+    "type": "none",
+    "severity": 0
+  }
+}

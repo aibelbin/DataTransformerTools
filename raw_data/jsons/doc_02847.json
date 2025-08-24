@@ -1,0 +1,39 @@
+{
+  "file_name": "doc_02847.png",
+  "annotations": [
+    {
+      "bbox": [
+        56.82,
+        682.61,
+        499.15,
+        47.51
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        56.82,
+        95.1,
+        498.9,
+        580.92
+      ],
+      "category_id": 5,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        56.82,
+        82.83,
+        31.28,
+        9.39
+      ],
+      "category_id": 2,
+      "category_name": ""
+    }
+  ],
+  "corruption": {
+    "type": "none",
+    "severity": 0
+  }
+}

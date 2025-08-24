@@ -1,0 +1,49 @@
+{
+  "file_name": "doc_03052.png",
+  "annotations": [
+    {
+      "bbox": [
+        150.0,
+        93.41,
+        372.53,
+        207.16
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        150.0,
+        313.41,
+        367.64,
+        109.16
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        150.0,
+        435.41,
+        373.63,
+        250.73
+      ],
+      "category_id": 1,
+      "category_name": ""
+    },
+    {
+      "bbox": [
+        90.0,
+        60.84,
+        430.38,
+        25.9
+      ],
+      "category_id": 2,
+      "category_name": ""
+    }
+  ],
+  "corruption": {
+    "type": "blur",
+    "severity": 1
+  }
+}
