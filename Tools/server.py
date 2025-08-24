@@ -2,16 +2,20 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
 from typing import List
 from pathlib import Path
-import shutil
-import tempfile
 from ultralytics import YOLO
 from PIL import Image
 import io
 import os
 
+# Added for PDF page rendering (PyMuPDF). Imported lazily so non-PDF users are unaffected.
+try:  # noqa: SIM105
+    import fitz  # PyMuPDF
+except Exception:  # pragma: no cover - handled at runtime if PDF used
+    fitz = None
+
 # Lazy load model (loaded on first request)
 _model = None
-MODEL_PATH = Path("runs/layout_v8m/weights/best.pt")
+MODEL_PATH = Path("runs/layout_v8m2/weights/best.pt")
 
 app = FastAPI(title="Layout Detection API", version="0.1.0")
 
@@ -27,21 +31,60 @@ def get_model():
 
 @app.post("/predict")
 async def predict(files: List[UploadFile] = File(...)):
+    """Accept image files (PNG/JPG, etc.) and/or PDF files.
+
+    For a PDF, each page is converted to an image and treated like an individual image input.
+    Output schema remains the same; PDF pages are given synthetic file names: <original>.pdf_page<N>.
+    """
     if not files:
         raise HTTPException(status_code=400, detail="No files uploaded")
+
     model = get_model()
+    # Collect PIL.Image objects (Ultralytics does not accept raw bytes list)
     images = []
-    file_names = []
+    file_names: List[str] = []
+
     for uf in files:
         data = await uf.read()
-        try:
-            Image.open(io.BytesIO(data)).verify()
-            images.append(data)
-            file_names.append(uf.filename or "image")
-        except Exception:
-            raise HTTPException(status_code=400, detail=f"File {uf.filename} is not a valid image")
+        fname = uf.filename or "file"
+        lower_name = fname.lower()
+        content_type = (uf.content_type or "").lower()
 
-    # Run predictions
+        is_pdf = lower_name.endswith(".pdf") or content_type == "application/pdf"
+        if is_pdf:
+            if fitz is None:  # Library not available
+                raise HTTPException(status_code=400, detail="PDF support requires PyMuPDF (install 'PyMuPDF')")
+            try:
+                # Open from bytes
+                doc = fitz.open(stream=data, filetype="pdf")
+            except Exception as e:  # Invalid PDF
+                raise HTTPException(status_code=400, detail=f"Invalid PDF '{fname}': {e}") from e
+            if doc.page_count == 0:
+                continue  # skip empty PDF
+            for page_index, page in enumerate(doc):
+                # Render page to image (default ~72 DPI). Increase quality by scaling matrix if needed later.
+                pix = page.get_pixmap(alpha=False)
+                img_bytes = pix.tobytes("png")
+                try:
+                    pil_img = Image.open(io.BytesIO(img_bytes)).convert("RGB")
+                except Exception as e:  # pragma: no cover
+                    raise HTTPException(status_code=500, detail=f"Failed to render PDF page {page_index+1} of {fname}: {e}") from e
+                images.append(pil_img)
+                file_names.append(f"{fname}_page{page_index+1}")
+            continue  # next uploaded file
+
+        # Standard image handling
+        try:
+            pil_img = Image.open(io.BytesIO(data)).convert("RGB")
+        except Exception:
+            raise HTTPException(status_code=400, detail=f"File {fname} is not a valid image or PDF")
+        images.append(pil_img)
+        file_names.append(fname)
+
+    if not images:
+        raise HTTPException(status_code=400, detail="No valid image pages found in upload")
+
+    # Run predictions (batch)
     results = model.predict(images, verbose=False)
     response = []
     for fname, r in zip(file_names, results):
@@ -57,13 +100,13 @@ async def predict(files: List[UploadFile] = File(...)):
                 "bbox": [x1, y1, w, h],
                 "category_id": cls_id,
                 "category_name": r.names.get(cls_id, str(cls_id)),
-                "confidence": conf
+                "confidence": conf,
             })
         response.append({
             "file_name": fname,
             "width": img_w,
             "height": img_h,
-            "annotations": anns
+            "annotations": anns,
         })
     return JSONResponse(content={"results": response})
 
