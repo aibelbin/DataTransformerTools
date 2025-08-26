@@ -1,8 +1,9 @@
-/venv
-.venv
-/datasets
-/raw_images
-/raw_json
+venv/
+.venv/
+datasets/
+raw_images/
+raw_json/
 yolo_data.yaml
 workflow.docx
-/runs
+runs/
+Test/Pdf/
